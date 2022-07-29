@@ -1,0 +1,141 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+/* .container{
+  width: 100vw;
+  height: 100vh;
+  background-color:aquamarine;
+  display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+}
+.nav{
+  width: 100%;
+  height: 20%;
+  background-color: bisque;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+}
+:root{
+  --primary:#d81e5b;
+  --secondary:#8c38ff;
+  --dark:#131a26;
+  --light:#eee
+}
+.App{
+  background-color: var(--light);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  display: flex;
+  height: 60vh;
+  width: 400px;
+  flex-direction: column;
+  border-radius: 16px;
+  background-color: var(--dark);
+}
+.prvi{
+  height: 16%;
+  border-radius: 16px;
+  text-align: right;
+  padding:10px 10px 5px 0;
+  background-color: var(--dark);
+  color: var(--light);
+  
+}
+.drugi{
+  height: 16%;
+}
+.drugi button{
+  width: 20%;
+  height: 100%;
+  background-color:var(--primary);
+  color: var(--light);
+  font-weight: 800;
+}
+.drugi button:hover{
+  background-color: #d81e5c90;
+}
+.treci{
+  height: 53%;
+}
+.treci button{
+  height: 33.333%;
+  width: 33.333%;
+  color: var(--light);
+  background-color: var(--dark);
+  box-shadow: 1px white;
+   font-weight: 500;
+}
+.treci button:hover{
+  opacity: 0.5;
+}
+.cetvrti{
+  height: 16%;
+}
+.cetvrti button{
+  height: 100%;
+  width: 33.333%;
+   font-weight: 500;
+   background-color: var(--dark);
+   color: var(--light);
+   border-radius: 16px;
+}
+.cetvrti button:hover{
+  opacity: 0.5;
+}
