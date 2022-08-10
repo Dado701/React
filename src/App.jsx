@@ -2,6 +2,8 @@
 // import { useEffect, useState } from "react";
 import { useEffect,useState } from "react";
 import "./App.css";
+import DessertCard from "./DessertCard";
+import {Route,Routes, Link} from "react-router-dom";
 
 
 // const App = () => {
@@ -103,64 +105,81 @@ import "./App.css";
 
 
 
+// export default function App(){
+//   const [calc,setCalc]= useState("");
+//   const [res,setRes]= useState("");
+//   const ops=[`/`,`*`,`+`,`-`,`.`];
+
+//   const UpdateCalc = value=>{
+//     if(
+//       ops.includes(value) && calc==="" ||
+//       ops.includes(value) && ops.includes(calc.slice(-1))
+//     )
+//       {
+//         return;
+//       }
+//     setCalc(calc+value);
+//   }
+//   const calculate =()=>{
+//     setCalc(eval(calc.toString()))
+//   }
+//   const deletecal =()=>{
+//     if(calc===""){
+//       return;
+//     }
+//     const value=calc.slice(0,-1);
+//     setCalc(value)
+//   }
+//  function brojevi(){
+//   const broj=[]
+//   for (let index = 1; index < 10; index++){
+// broj.push(
+//  <button onClick={()=>{UpdateCalc(index.toString())}} key={index}>{index}</button>
+// )  
+//   }
+//   return broj;
+//  }
+
+// return(
+//  <div className="App">
+//  <div className="main">
+// <div className="prvi">
+// <h1>{calc || "0"}</h1>
+// </div>
+// <div className="drugi">
+//  <button onClick={()=>{UpdateCalc(`/`)}}>/</button>
+//  <button onClick={()=>{UpdateCalc(`*`)}}>*</button>
+//  <button onClick={()=>{UpdateCalc(`+`)}}>+</button>
+//  <button onClick={()=>{UpdateCalc(`-`)}}>-</button>
+//  <button onClick={()=>{deletecal()}}>DEL</button>
+// </div>
+// <div className="treci">
+
+//  {brojevi()}
+// </div>
+
+// <div className="cetvrti">
+//  <button onClick={()=>{UpdateCalc(`0`)}}>0</button>
+//  <button onClick={()=>{UpdateCalc(`.`)}}>.</button>
+//  <button onClick={()=>{calculate()}}>=</button>
+// </div>
+//  </div></div>
+// )
+// }
+
 export default function App(){
-  const [calc,setCalc]= useState("");
-  const [res,setRes]= useState("");
-  const ops=[`/`,`*`,`+`,`-`,`.`];
+  return(
+    <div>
+    <Routes>
+      <Route path={"/DessertCard"} element={<DessertCard/>}/> 
+      
 
-  const UpdateCalc = value=>{
-    if(
-      ops.includes(value) && calc==="" ||
-      ops.includes(value) && ops.includes(calc.slice(-1))
-    )
-      {
-        return;
-      }
-    setCalc(calc+value);
-  }
-  const calculate =()=>{
-    setCalc(eval(calc.toString()))
-  }
-  const deletecal =()=>{
-    if(calc===""){
-      return;
-    }
-    const value=calc.slice(0,-1);
-    setCalc(value)
-  }
- function brojevi(){
-  const broj=[]
-  for (let index = 1; index < 10; index++){
-broj.push(
- <button onClick={()=>{UpdateCalc(index.toString())}} key={index}>{index}</button>
-)  
-  }
-  return broj;
- }
-
-return(
- <div className="App">
- <div className="main">
-<div className="prvi">
-<h1>{calc || "0"}</h1>
-</div>
-<div className="drugi">
- <button onClick={()=>{UpdateCalc(`/`)}}>/</button>
- <button onClick={()=>{UpdateCalc(`*`)}}>*</button>
- <button onClick={()=>{UpdateCalc(`+`)}}>+</button>
- <button onClick={()=>{UpdateCalc(`-`)}}>-</button>
- <button onClick={()=>{deletecal()}}>DEL</button>
-</div>
-<div className="treci">
-
- {brojevi()}
-</div>
-
-<div className="cetvrti">
- <button onClick={()=>{UpdateCalc(`0`)}}>0</button>
- <button onClick={()=>{UpdateCalc(`.`)}}>.</button>
- <button onClick={()=>{calculate()}}>=</button>
-</div>
- </div></div>
-)
+    </Routes>
+    <div>
+<Link to={"/DessertCard"}>
+  <h1>Cao</h1>
+</Link>
+    </div>
+    </div>
+  )
 }
