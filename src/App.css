@@ -121,13 +121,13 @@ button{
   background-color: var(--dark);
   box-shadow: 1px white;
    font-weight: 500;
+   font-size: 20px;
 }
 .treci button:hover{
   opacity: 0.5;
 }
 .cetvrti{
   height: 16%;
-  border: 2px solid black;
 }
 .cetvrti button{
   height: 100%;
