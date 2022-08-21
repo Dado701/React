@@ -96,7 +96,7 @@ button{
   padding:10px 10px 5px 0;
   background-color: var(--dark);
   color: var(--light);
-  
+  border: 1px solid red;
 }
 .drugi{
   height: 16%;
@@ -121,7 +121,6 @@ button{
   background-color: var(--dark);
   box-shadow: 1px white;
    font-weight: 500;
-   font-size: 20px;
 }
 .treci button:hover{
   opacity: 0.5;
