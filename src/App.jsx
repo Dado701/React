@@ -167,19 +167,43 @@ import {Route,Routes, Link} from "react-router-dom";
 // )
 // }
 
-export default function App(){
-  return(
-    <div>
-    <Routes>
-      <Route path={"/DessertCard"} element={<DessertCard/>}/> 
+// export default function App(){
+//   return(
+//     <div>
+//     <Routes>
+//       <Route path={"/DessertCard"} element={<DessertCard/>}/> 
       
 
-    </Routes>
+//     </Routes>
+//     <div>
+// <Link to={"/DessertCard"}>
+//   <h1>Cao</h1>
+// </Link>
+//     </div>
+//     </div>
+//   )
+// }
+
+import UserContext from "./UserContext";
+import { Context } from "./UserContext";
+import { useContext } from "react";
+const App=()=>{
+  const{user,setUser}=useContext(Context);
+  return(
     <div>
-<Link to={"/DessertCard"}>
-  <h1>Cao</h1>
-</Link>
-    </div>
+      <button onClick={()=>{
+        setUser(user-1)
+      }}>
+-
+      </button>
+      <h1>{user}</h1>
+      <button onClick={()=>{
+        setUser(user+1)
+      }}>
+        +
+      </button>
     </div>
   )
 }
+
+export default App;
